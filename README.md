@@ -1,2 +1,3 @@
 # flask-demo
-Me learning flask
+> $ sudo pip install flask
+
