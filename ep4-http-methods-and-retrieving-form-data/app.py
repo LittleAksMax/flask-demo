@@ -1,5 +1,5 @@
 
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request # request needed to see which method we are using
 
 app = Flask(__name__)
 
@@ -11,9 +11,13 @@ def index():
 def user(usrname):
     return render_template("user.html", username=usrname) # cann put python code in by doing this {% expression %} as long as you end if with the appropriate {% %} (i.e. for ends in endfor)
 
-#@app.route("/admin")
-#def admin():
-#    return redirect(url_for("index")) # function name as string
+@app.route("/login", methods=["GET", "POST"]) # methods we can use in the login page
+def login():
+    if request.method == "POST": # we got information and want to redirect to user
+        user = request.form["username"] # can also check if blank
+        return redirect(url_for("user", usrname=user))
+    else: # we didn't click the submit button
+        return render_template("login.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

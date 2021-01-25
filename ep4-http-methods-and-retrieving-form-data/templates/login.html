@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %} Login page {% endblock %}
+
+{% block content %}
+
+<!-- # in action shows we won't redirect to any page -->
+<form action="#" method="post">
+    <p>Name: </p>
+    <p><input type="text" name="username"></p>
+    <p><input type="submit" name="Submit"></p>
+</form>
+
+{% endblock %}
