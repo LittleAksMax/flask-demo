@@ -9,3 +9,6 @@ can run certain python in this format
 {% endfor %}
 ```
 But you have to end it with the appropriate end 
+
+You can get certain tools from bootstrap, stuff to do in base.html.
+Can also make base html and make everything inherit from it, you can fill it with blocks that need filling for things that need to change. Very good for no duplicate code.
