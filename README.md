@@ -20,4 +20,6 @@ I made a login html and also a login route in app.py that redirects to the user.
 
 Creating sessions is not bad; create a permanent session time, and a secret key for storing, use the session dict for data you want to store for every user for each session, usually name.
 
-Flashing messages is used for showing some information on the GUI about events, i.e. logged out successfully; log in successful. Just import flash and post messages. Each message is either info, warning, or error type. Also changes in base.html for getting flashed messages. Should probably change basefile but it's fine for now.
+Flashing messages is used for showing some information on the GUI about events, i.e. logged out successfully; log in successful. Just import flash and post messages. Each message is either info, warning, or error type. Also changes in base.html for getting flashed messages. Should probably change basefile but it's fine for now. Probably best integrated with javascript, how to use javascript in these applications is below:
+
+For ep7 I started from scratch. You have to make a static directory and split it into sections - javascript, images, styles - (not necessary but best practice), you can reference these files from the html files by doing a {{ url_for('static', filename=filename.js ) }} in the html files.
