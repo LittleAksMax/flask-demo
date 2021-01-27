@@ -62,7 +62,7 @@ Step 10: configure and enable virtual host
 -       sudo nano /etc/apache2/sites-available/webApp.conf
 
 CLICK TO DOWNLOAD THE CODE TO PUT IN webApp.conf
-https://techwithtim.net/wp-content/up...
+https://techwithtim.net/wp-content/uploads/2019/11/code-to-place-in-.conf-file.txt
 
 -      sudo a2ensite webApp 
 -      systemctl reload apache2
